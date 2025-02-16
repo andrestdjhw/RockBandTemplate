@@ -34,7 +34,7 @@ header h1 {
 
 nav {
     text-align: center;
-    background-color: #a19ca4;
+    background-color: #5f97af; /*#ac19ca4*/
     padding: 10px 0;
     max-width: 100%;
 }
@@ -44,6 +44,58 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.2em;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: url('https://picsum.photos/id/452/1600/900') center/cover no-repeat;/*914, 145 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content{
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1{
+    font-size: 4rem;
+    /*font-family: 'Bangers', sans-serif;*/
+}
+
+.hero p{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.hero .cta{
+    display: inline-block;
+    background: #ff4081;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3 ease;
+}
+
+.hero .cta:hover{
+    background: #d8356d;
 }
 
 section {
@@ -76,6 +128,25 @@ section p {
 
 .streaming-links a:hover {
     color: #ff4081; /* Color al pasar el mouse (puedes cambiarlo) */
+}
+
+.tour-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 40px;
+    text-align: center;
+}
+
+.tour-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.tour-gallery img:hover {
+    transform: scale(1.05);
 }
 
 .contact-form {
